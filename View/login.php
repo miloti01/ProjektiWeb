@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,89 +11,51 @@
       src="https://kit.fontawesome.com/64d58efce2.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="loginStyle.css" />
     <title>Sign in & Sign up Form</title>
   </head>
   <body>
-    <nav class="navigation">
-
-    <a href="#" class="logo">ShootShop</a>
-
-    <input type="checkbox" class="menu-btn" id="menu-btn">
-    <label for="menu-btn" class="menu-icon">
-      <span class="nav-icon">
-        <i class="fas fa-bars"></i>
-      </span>
-    </label>
-
-    <ul class="menu">
-      <li><a href="../Homepage/home.html#">Home</a></li>
-      <li><a href="../Shop/shop.html#">Shop</a></li>
-      <li><a href="../Contact/contact.html">Contact</a></li>
-    </ul>
-
-    <div class="right-elements">
-
-      <a href="#" class="search">
-        <i class="fas fa-search"></i>
-      </a>
-
-      <a href="#" class="cart">
-        <i class="fas fa-shopping-bag"></i>
-      </a>
-
-      <a href="..\Login\login.html?#" class="user">
-        <i class="fas fa-user"></i>
-      </a>
-
-    </div>
-  </nav>
+  <?php
+    include('../Includes/header.php');
+		include('../Controller/loginController.php');
+    ?>
   <section id="L-S-Form">
     <div class="container">
       <div class="forms-container">
         <div class="signin-signup">
-          <form action="#" class="sign-in-form">
+          <form action="" method="post" class="sign-in-form">
             <h2 class="title">Sign in</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username" />
+              <input type="text" placeholder="Email Address" name="email"  required />
             </div>
-            <div class="input-field">
-              <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
-            </div>
-            <input type="submit" value="Login" class="btn solid" />
-            <p class="social-text">Or Sign in with social platforms</p>
-            <div class="social-media">
-              <a href="#" class="social-icon">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-google"></i>
-              </a>
-              <a href="#" class="social-icon">
-                <i class="fab fa-linkedin-in"></i>
-              </a>
-            </div>
-          </form>
-          <form action="#" class="sign-up-form">
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Password" name="password" required />
+          </div>
+          <input type="submit" value="Login" name="signin" class="btn solid" />
+          <p style="display: flex;justify-content: center;align-items: center;margin-top: 20px;"><a href="forgot-password.php" style="color: #4590ef;">Forgot Password?</a></p>
+        </form>
+          <form action="" class="sign-up-form" method="post">
             <h2 class="title">Sign up</h2>
             <div class="input-field">
-              <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username" />
-            </div>
-            <div class="input-field">
-              <i class="fas fa-envelope"></i>
-              <input type="email" placeholder="Email" />
-            </div>
-            <div class="input-field">
-              <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
-            </div>
-            <input type="submit" class="btn" value="Sign up" />
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Name" name="signup_name" required />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-user"></i>
+            <input type="text" placeholder="Last Name" name="signup_last_name" required />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-envelope"></i>
+            <input type="email" placeholder="Email Address" name="signup_email" required />
+          </div>
+          <div class="input-field">
+            <i class="fas fa-lock"></i>
+            <input type="password" placeholder="Password" name="signup_password" required />
+          </div>
+      
+          <input type="submit" class="btn" name="signup" value="Sign up" />
             <p class="social-text">Or Sign up with social platforms</p>
             <div class="social-media">
               <a href="#" class="social-icon">
@@ -123,7 +86,6 @@
               Sign up
             </button>
           </div>
-          <img src="img/log.svg" class="image" alt="" />
         </div>
         <div class="panel right-panel">
           <div class="content">
@@ -136,7 +98,6 @@
               Sign in
             </button>
           </div>
-          <img src="img/register.svg" class="image" alt="" />
         </div>
       </div>
     </div>
@@ -146,7 +107,7 @@
 
       <div class="footer-logo-container">
         <div class="footer-logo">ShootShop</div>
-        <span>Copyright 2022</span>
+        <span>Copyright 2021</span>
 
         <div class="footer-social">
           <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -193,8 +154,8 @@
 
     </div>
   </footer>
-  <span class="copyright">© 2022 ShootShop</span>
+  <span class="copyright">© 2021 ShootShop</span>
 
-    <script src="app.js"></script>
+    <script src="loginApp.js"></script>
   </body>
 </html>

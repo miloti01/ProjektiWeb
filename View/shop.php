@@ -7,9 +7,8 @@
 
 	<title>ShootShop</title>
 
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="shopstyle.css">
 
-	<link rel="shortcut icon" href="fav-icon.png">
 
 	<script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
 
@@ -18,39 +17,9 @@
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-	<nav class="navigation">
-
-		<a href="#" class="logo">ShootShop</a>
-
-		<input type="checkbox" class="menu-btn" id="menu-btn">
-		<label for="menu-btn" class="menu-icon">
-			<span class="nav-icon">
-				<i class="fas fa-bars"></i>
-			</span>
-		</label>
-
-		<ul class="menu">
-			<li><a href="../Homepage/home.html#" >Home</a></li>
-			<li><a href="../Shop/shop.html#" class="active">Shop</a></li>
-			<li><a href="../Contact/contact.html">Contact</a></li>
-		</ul>
-
-		<div class="right-elements">
-
-			<a href="#" class="search">
-				<i class="fas fa-search"></i>
-			</a>
-
-			<a href="#" class="cart">
-				<i class="fas fa-shopping-bag"></i>
-			</a>
-
-			<a href="..\Login\login.html?#" class="user">
-				<i class="fas fa-user"></i>
-			</a>
-
-		</div>
-	</nav>
+<?php
+		include('../Includes/header.php');
+	?>
 	<section id="feature-product">
 		<h2>Shoes</h2>
 
@@ -59,7 +28,7 @@
 			<div class="feature-product-box">
 				
 				<div class="product-feature-img">
-					<img src="..\Shop\img\p1.jpg" alt="">
+					<img src="../Resources/productImg/p1.jpg" alt="">
 				</div>
 
 				<div class="product-feature-text-container">
@@ -77,7 +46,7 @@
 			<div class="feature-product-box">
 				
 				<div class="product-feature-img">
-					<img src="..\Shop\img\p2.jpg" alt="">
+					<img src="../Resources/productImg/p2.jpg" alt="">
 				</div>
 
 				<div class="product-feature-text-container">
@@ -96,7 +65,7 @@
 			<div class="feature-product-box">
 				
 				<div class="product-feature-img">
-					<img src="..\Shop\img\p3.jpg" alt="">
+					<img src="../Resources/productImg/p3.jpg" alt="">
 				</div>
 
 				<div class="product-feature-text-container">
@@ -115,7 +84,7 @@
 			<div class="feature-product-box">
 				
 				<div class="product-feature-img">
-					<img src="..\Shop\img\p4.jpg" alt="">
+					<img src="../Resources/productImg/p4.jpg" alt="">
 				</div>
 
 				<div class="product-feature-text-container">
@@ -134,7 +103,7 @@
 			<div class="feature-product-box">
 				
 				<div class="product-feature-img">
-					<img src="..\Shop\img\p5.jpg" alt="">
+					<img src="../Resources/productImg/p5.jpg" alt="">
 				</div>
 
 				<div class="product-feature-text-container">
@@ -152,7 +121,7 @@
 			<div class="feature-product-box">
 				
 				<div class="product-feature-img">
-					<img src="..\Shop\img\p6.jpg" alt="">
+					<img src="../Resources/productImg/p6.jpg" alt="">
 				</div>
 
 				<div class="product-feature-text-container">
@@ -171,7 +140,7 @@
 			<div class="feature-product-box">
 				
 				<div class="product-feature-img">
-					<img src="..\Shop\img\p7.jpg" alt="">
+					<img src="../Resources/productImg/p7.jpg" alt="">
 				</div>
 
 				<div class="product-feature-text-container">
@@ -190,7 +159,7 @@
 			<div class="feature-product-box">
 				
 				<div class="product-feature-img">
-					<img src="..\Shop\img\p8.jpg" alt="">
+					<img src="../Resources/productImg/p8.jpg" alt="">
 				</div>
 
 				<div class="product-feature-text-container">
@@ -208,7 +177,7 @@
 			<div class="feature-product-box">
 				
 				<div class="product-feature-img">
-					<img src="..\Shop\img\p9.jpg" alt="">
+					<img src="../Resources/productImg/p9.jpg" alt="">
 				</div>
 
 				<div class="product-feature-text-container">
@@ -226,7 +195,7 @@
 			<div class="feature-product-box">
 				
 				<div class="product-feature-img">
-					<img src="..\Shop\img\p10.jpg" alt="">
+					<img src="../Resources/productImg/p10.jpg" alt="">
 				</div>
 
 				<div class="product-feature-text-container">
@@ -245,7 +214,7 @@
 			<div class="feature-product-box">
 				
 				<div class="product-feature-img">
-					<img src="..\Shop\img\p11.jpg" alt="">
+					<img src="../Resources/productImg/p11.jpg" alt="">
 				</div>
 
 				<div class="product-feature-text-container">
@@ -264,7 +233,7 @@
 			<div class="feature-product-box">
 				
 				<div class="product-feature-img">
-					<img src="..\Shop\img\p12.jpg" alt="">
+					<img src="../Resources/productImg/p12.jpg" alt="">
 				</div>
 
 				<div class="product-feature-text-container">
@@ -283,7 +252,7 @@
 			<div class="feature-product-box">
 				
 				<div class="product-feature-img">
-					<img src="..\Shop\img\p13.jpg" alt="">
+					<img src="../Resources/productImg/p13.jpg" alt="">
 				</div>
 
 				<div class="product-feature-text-container">
@@ -301,7 +270,7 @@
 			<div class="feature-product-box">
 				
 				<div class="product-feature-img">
-					<img src="..\Shop\img\p14.jpg" alt="">
+					<img src="../Resources/productImg/p14.jpg" alt="">
 				</div>
 
 				<div class="product-feature-text-container">
@@ -320,7 +289,7 @@
 			<div class="feature-product-box">
 				
 				<div class="product-feature-img">
-					<img src="..\Shop\img\p15.jpg" alt="">
+					<img src="../Resources/productImg/p15.jpg" alt="">
 				</div>
 
 				<div class="product-feature-text-container">
@@ -339,7 +308,7 @@
 			<div class="feature-product-box">
 				
 				<div class="product-feature-img">
-					<img src="..\Shop\img\p16.jpg" alt="">
+					<img src="../Resources/productImg/p16.jpg" alt="">
 				</div>
 
 				<div class="product-feature-text-container">
@@ -366,7 +335,7 @@
 			<div class="feature-product-box">
 				
 				<div class="product-feature-img">
-					<img src="..\Shop\img\j1.png" alt="">
+					<img src="../Resources/productImg/j1.png" alt="">
 				</div>
 
 				<div class="product-feature-text-container">
@@ -384,7 +353,7 @@
 			<div class="feature-product-box">
 				
 				<div class="product-feature-img">
-					<img src="..\Shop\img\j2.png" alt="">
+					<img src="../Resources/productImg/j2.png" alt="">
 				</div>
 
 				<div class="product-feature-text-container">
@@ -402,7 +371,7 @@
 			<div class="feature-product-box">
 				
 				<div class="product-feature-img">
-					<img src="..\Shop\img\j3.png" alt="">
+					<img src="../Resources/productImg/j3.png" alt="">
 				</div>
 
 				<div class="product-feature-text-container">
@@ -420,7 +389,7 @@
 			<div class="feature-product-box">
 				
 				<div class="product-feature-img">
-					<img src="..\Shop\img\j4.png" alt="">
+					<img src="../Resources/productImg/j4.png" alt="">
 				</div>
 
 				<div class="product-feature-text-container">
@@ -443,7 +412,7 @@
 
 			<div class="footer-logo-container">
 				<div class="footer-logo">ShootShop</div>
-				<span>Copyright 2022</span>
+				<span>Copyright 2021</span>
 
 				<div class="footer-social">
 					<a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -490,7 +459,7 @@
 
 		</div>
 	</footer>
-	<span class="copyright">© 2022 ShootShop</span>
+	<span class="copyright">© 2021 ShootShop</span>
 
 </body>
 </html>

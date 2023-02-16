@@ -2,49 +2,19 @@
 <html>
 <head>
 	<title>Contact us</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="contactStyle.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-	<link rel="shortcut icon" href="fav-icon.png">
+
 
 	<script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
 </head>
 <body>
-	<nav class="navigation">
-
-		<a href="#" class="logo">ShootShop</a>
-
-		<input type="checkbox" class="menu-btn" id="menu-btn">
-		<label for="menu-btn" class="menu-icon">
-			<span class="nav-icon">
-				<i class="fas fa-bars"></i>
-			</span>
-		</label>
-
-		<ul class="menu">
-			<li><a href="../Homepage/home.html#">Home</a></li>
-			<li><a href="../Shop/shop.html#">Shop</a></li>
-			<li><a href="../Contact/contact.html" class="active">Contact</a></li>
-		</ul>
-
-		<div class="right-elements">
-
-			<a href="#" class="search">
-				<i class="fas fa-search"></i>
-			</a>
-
-			<a href="#" class="cart">
-				<i class="fas fa-shopping-bag"></i>
-			</a>
-
-			<a href="..\Login\login.html?#" class="user">
-				<i class="fas fa-user"></i>
-			</a>
-
-		</div>
-	</nav>
+<?php
+		include('../Includes/header.php');
+	?>
 
 	<div class="container">
 		<div class="contact-box">
@@ -68,7 +38,7 @@
 
 			<div class="footer-logo-container">
 				<div class="footer-logo">ShootShop</div>
-				<span>Copyright 2022</span>
+				<span>Copyright 2021</span>
 
 				<div class="footer-social">
 					<a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -115,6 +85,6 @@
 
 		</div>
 	</footer>
-	<span class="copyright">© 2022 ShootShop</span>
+	<span class="copyright">© 2021 ShootShop</span>
 </body>
 </html>
