@@ -12,29 +12,33 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
 </head>
 <body>
-<?php
+	<?php
 		include('../Includes/header.php');
+		include('../Controller/addFeedbackController.php');
 	?>
+
 
 	<div class="container">
 		<div class="contact-box">
-			
 			<div class="c-right">
+			<form action="" method="post">
 				<h2>Contact Us</h2>
-				<input type="text" class="field" placeholder="Your Name">
-				<input type="text" class="field" placeholder="Your Email">
-				<input type="text" class="field" placeholder="Subject">
-				<textarea placeholder="Message" class="field"></textarea>
-				<button class="btn">Send</button>
+				<input type="text" name="name" class="field" placeholder="Your Name">
+				<input type="text" name="email" class="field" placeholder="Your Email">
+				<input type="text" name="subject" class="field" placeholder="Subject">
+				<textarea placeholder="Message"  name="message" class="field"></textarea>
+				<button id="contactBtn" name="addFeedback" type="submit" class="btn">Submit</button>
+				</form>
 			</div>
 			<div class="c-left">
-			
+			<img src="../Includes/img/c1.jpg" alt="">
 			</div>
 		</div>
 	</div>
 
+
 	<?php 
-	  include('../Includes/footer.php');
+	  	include('../Includes/footer.php');
 	?>
 	<span class="copyright">© 2021 ShootShop</span>
 </body>

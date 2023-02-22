@@ -585,7 +585,7 @@ footer{
   }
   .navigation .menu li a:hover{
     color: #ffffff;
-    background-color: #e74444
+    background-color: #e74444;
         transition: all ease 0.2s;  
   }
   .nav-icon{
@@ -661,3 +661,4 @@ footer{
         margin: 0px;
     }
 
+}

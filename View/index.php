@@ -24,12 +24,11 @@
 	?>
 	<section id="main">
 		<div class="main-content">
-
 			<div class="main-text">
 				<span>Collection</span>
 				<h1>Comfortable Shoes</h1>
 				<p>ShootShop is a basketball specialist started over 15 years ago. We unite the best brands such as Nike, Air Jordan, Adidas, Under Armour, Spalding and all other basketball-related products under one roof. Premium service & quality from on court basketball experience. To be found in over 10 stores in Europe and online!</p>
-				<a href="#">Shop Now</a>
+				<a href="shop.php">Shop Now</a>
 			</div>
 
 			<div class="main-img">
@@ -38,7 +37,7 @@
 		</div>
 	</section>
 
-	<section id="categories">
+	<section id="categories"> 
 		<h2>Categories</h2>
 
 		<div class="category-container">
@@ -46,6 +45,7 @@
 				<img src="../Includes/img/box1.jpg" alt="category">
 				<span>Shoes</span>
 			</a>
+			
 
 			<a href="#" class="category-box">
 				<img src="../Includes/img/box2.jpg" alt="category">
@@ -74,7 +74,7 @@
 			<div class="feature-product-box">
 				
 				<div class="product-feature-img">
-					<img src="../Resources/productImg/p1.jpg" alt="">
+					<img src="../Resources/productImg/p6.jpg" alt="">
 				</div>
 
 				<div class="product-feature-text-container">
@@ -153,8 +153,8 @@
 		<div class="banner-text">
 			<strong>Beatiful Shoes</strong>
 			<span>From 125€</span>
-			<p>Long Lasting and Comfortable to use. This is Only For You</p>
-			<a href="#">Shop Now</a>
+			<p>Long Lasting and Comfortable to Use</p>
+			<a href="shop.php">Shop Now</a>
 		</div>
 		
 		<div class="banner-img">
@@ -171,7 +171,7 @@
 			
 			<div class="news-box"> 
 				<div class="news-img">
-					<img src="../Includes/img/n1.jpg">
+					<img src="../Resources/newsImg/n1.jpg">
 					<div class="news-label">New</div>
 				</div>
 
@@ -184,7 +184,7 @@
 
 			<div class="news-box"> 
 				<div class="news-img">
-					<img src="../Includes/img/n2.jpg">
+					<img src="../Resources/newsImg/n2.jpg">
 					<div class="news-label">New</div>
 				</div>
 
@@ -197,7 +197,7 @@
 
 			<div class="news-box"> 
 				<div class="news-img">
-					<img src="../Includes/img/n3.jpg">
+					<img src="../Resources/newsImg/n3.jpg">
 					<div class="news-label">New</div>
 				</div>
 

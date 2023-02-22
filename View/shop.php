@@ -7,7 +7,7 @@
 
 	<title>ShootShop</title>
 
-	<link rel="stylesheet" type="text/css" href="shopstyle.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
 
 
 	<script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
@@ -19,391 +19,44 @@
 <body>
 <?php
 		include('../Includes/header.php');
+		include_once '../Repository/productRepository.php';
+		$productRepository = new productRepository();
+	    $products = $productRepository->getAllproducts();
+		$productRepository = new productRepository();
+		$product  = $productRepository->getProductById($id);
+		
+
 	?>
-	<section id="feature-product">
+	<section style='padding-top:35px;' id="feature-product">
 		<h2>Shoes</h2>
 
 		<div class="feature-product-container">
-			
-			<div class="feature-product-box">
-				
-				<div class="product-feature-img">
-					<img src="../Resources/productImg/p1.jpg" alt="">
-				</div>
+			<?php
+				foreach($products as $p){
 
-				<div class="product-feature-text-container">
-					<div class="product-feature-text">
-						<strong>AJ 12 Retro "Utility"</strong>
-						<span>95.00€</span>
+				echo"
+				<div class='feature-product-box'>
+					
+					<div class='product-feature-img'>
+						<img src='../Resources/productImg/".$p['image']."'>
 					</div>
 
-					<div class="cart-like">
-						<a href="#"><i class="fas fa-shopping-cart"></i></a>
-						<a href="#"><i class="far fa-heart"></i></a>
+					<div class='product-feature-text-container'>
+						<div class='product-feature-text'>
+							<strong>".$p['name']."</strong>
+							<span>".$p['price']."€</span>
+						</div>
+
+						<div class='cart-like'>
+							<a class='cart-btn' href='../Controller/addToCartController.php?id=$p[ID]'><i class='fas fa-shopping-cart'></i></a>
+						</div>
 					</div>
-				</div>
-			</div>
-			<div class="feature-product-box">
-				
-				<div class="product-feature-img">
-					<img src="../Resources/productImg/p2.jpg" alt="">
-				</div>
-
-				<div class="product-feature-text-container">
-					<div class="product-feature-text">
-						<strong>AJ 13 Retro Low</strong>
-						<span>102.00€</span>
-					</div>
-
-					<div class="cart-like">
-						<a href="#"><i class="fas fa-shopping-cart"></i></a>
-						<a href="#"><i class="far fa-heart"></i></a>
-					</div>
-				</div>
-			</div>
-
-			<div class="feature-product-box">
-				
-				<div class="product-feature-img">
-					<img src="../Resources/productImg/p3.jpg" alt="">
-				</div>
-
-				<div class="product-feature-text-container">
-					<div class="product-feature-text">
-						<strong>AJ 13 Retro Obisidian</strong>
-						<span>115.00€</span>
-					</div>
-
-					<div class="cart-like">
-						<a href="#"><i class="fas fa-shopping-cart"></i></a>
-						<a href="#"><i class="far fa-heart"></i></a>
-					</div>
-				</div>
-			</div>
-
-			<div class="feature-product-box">
-				
-				<div class="product-feature-img">
-					<img src="../Resources/productImg/p4.jpg" alt="">
-				</div>
-
-				<div class="product-feature-text-container">
-					<div class="product-feature-text">
-						<strong>AJ 1 Mid Metallic</strong>
-						<span>87.00€</span>
-					</div>
-
-					<div class="cart-like">
-						<a href="#"><i class="fas fa-shopping-cart"></i></a>
-						<a href="#"><i class="far fa-heart"></i></a>
-					</div>
-				</div>
-			</div>
-
-			<div class="feature-product-box">
-				
-				<div class="product-feature-img">
-					<img src="../Resources/productImg/p5.jpg" alt="">
-				</div>
-
-				<div class="product-feature-text-container">
-					<div class="product-feature-text">
-						<strong>Jordan 3 Bred</strong>
-						<span>90.00€</span>
-					</div>
-
-					<div class="cart-like">
-						<a href="#"><i class="fas fa-shopping-cart"></i></a>
-						<a href="#"><i class="far fa-heart"></i></a>
-					</div>
-				</div>
-			</div>
-			<div class="feature-product-box">
-				
-				<div class="product-feature-img">
-					<img src="../Resources/productImg/p6.jpg" alt="">
-				</div>
-
-				<div class="product-feature-text-container">
-					<div class="product-feature-text">
-						<strong>AJ 1 Retro High Fusion</strong>
-						<span>140.00€</span>
-					</div>
-
-					<div class="cart-like">
-						<a href="#"><i class="fas fa-shopping-cart"></i></a>
-						<a href="#"><i class="far fa-heart"></i></a>
-					</div>
-				</div>
-			</div>
-
-			<div class="feature-product-box">
-				
-				<div class="product-feature-img">
-					<img src="../Resources/productImg/p7.jpg" alt="">
-				</div>
-
-				<div class="product-feature-text-container">
-					<div class="product-feature-text">
-						<strong>AJ 1 Low OG G-Green</strong>
-						<span>110.00€</span>
-					</div>
-
-					<div class="cart-like">
-						<a href="#"><i class="fas fa-shopping-cart"></i></a>
-						<a href="#"><i class="far fa-heart"></i></a>
-					</div>
-				</div>
-			</div>
-
-			<div class="feature-product-box">
-				
-				<div class="product-feature-img">
-					<img src="../Resources/productImg/p8.jpg" alt="">
-				</div>
-
-				<div class="product-feature-text-container">
-					<div class="product-feature-text">
-						<strong>AJ 36 'Psychic'</strong>
-						<span>167.00€</span>
-					</div>
-
-					<div class="cart-like">
-						<a href="#"><i class="fas fa-shopping-cart"></i></a>
-						<a href="#"><i class="far fa-heart"></i></a>
-					</div>
-				</div>
-			</div>
-			<div class="feature-product-box">
-				
-				<div class="product-feature-img">
-					<img src="../Resources/productImg/p9.jpg" alt="">
-				</div>
-
-				<div class="product-feature-text-container">
-					<div class="product-feature-text">
-						<strong>J Zion 1 'Marion'</strong>
-						<span>65.00€</span>
-					</div>
-
-					<div class="cart-like">
-						<a href="#"><i class="fas fa-shopping-cart"></i></a>
-						<a href="#"><i class="far fa-heart"></i></a>
-					</div>
-				</div>
-			</div>
-			<div class="feature-product-box">
-				
-				<div class="product-feature-img">
-					<img src="../Resources/productImg/p10.jpg" alt="">
-				</div>
-
-				<div class="product-feature-text-container">
-					<div class="product-feature-text">
-						<strong>J Why Not Zer0.4</strong>
-						<span>87.00€</span>
-					</div>
-
-					<div class="cart-like">
-						<a href="#"><i class="fas fa-shopping-cart"></i></a>
-						<a href="#"><i class="far fa-heart"></i></a>
-					</div>
-				</div>
-			</div>
-
-			<div class="feature-product-box">
-				
-				<div class="product-feature-img">
-					<img src="../Resources/productImg/p11.jpg" alt="">
-				</div>
-
-				<div class="product-feature-text-container">
-					<div class="product-feature-text">
-						<strong>AJ 13 Retro</strong>
-						<span>190.00€</span>
-					</div>
-
-					<div class="cart-like">
-						<a href="#"><i class="fas fa-shopping-cart"></i></a>
-						<a href="#"><i class="far fa-heart"></i></a>
-					</div>
-				</div>
-			</div>
-
-			<div class="feature-product-box">
-				
-				<div class="product-feature-img">
-					<img src="../Resources/productImg/p12.jpg" alt="">
-				</div>
-
-				<div class="product-feature-text-container">
-					<div class="product-feature-text">
-						<strong>AJ 1 Low SE</strong>
-						<span>110.00€</span>
-					</div>
-
-					<div class="cart-like">
-						<a href="#"><i class="fas fa-shopping-cart"></i></a>
-						<a href="#"><i class="far fa-heart"></i></a>
-					</div>
-				</div>
-			</div>
-
-			<div class="feature-product-box">
-				
-				<div class="product-feature-img">
-					<img src="../Resources/productImg/p13.jpg" alt="">
-				</div>
-
-				<div class="product-feature-text-container">
-					<div class="product-feature-text">
-						<strong>AJ 1 Mid SE</strong>
-						<span>120.00€</span>
-					</div>
-
-					<div class="cart-like">
-						<a href="#"><i class="fas fa-shopping-cart"></i></a>
-						<a href="#"><i class="far fa-heart"></i></a>
-					</div>
-				</div>
-			</div>
-			<div class="feature-product-box">
-				
-				<div class="product-feature-img">
-					<img src="../Resources/productImg/p14.jpg" alt="">
-				</div>
-
-				<div class="product-feature-text-container">
-					<div class="product-feature-text">
-						<strong>Jordan One Take II</strong>
-						<span>90.00€</span>
-					</div>
-
-					<div class="cart-like">
-						<a href="#"><i class="fas fa-shopping-cart"></i></a>
-						<a href="#"><i class="far fa-heart"></i></a>
-					</div>
-				</div>
-			</div>
-
-			<div class="feature-product-box">
-				
-				<div class="product-feature-img">
-					<img src="../Resources/productImg/p15.jpg" alt="">
-				</div>
-
-				<div class="product-feature-text-container">
-					<div class="product-feature-text">
-						<strong>Jordan Zer0.4 "Family</strong>
-						<span>87.00€</span>
-					</div>
-
-					<div class="cart-like">
-						<a href="#"><i class="fas fa-shopping-cart"></i></a>
-						<a href="#"><i class="far fa-heart"></i></a>
-					</div>
-				</div>
-			</div>
-
-			<div class="feature-product-box">
-				
-				<div class="product-feature-img">
-					<img src="../Resources/productImg/p16.jpg" alt="">
-				</div>
-
-				<div class="product-feature-text-container">
-					<div class="product-feature-text">
-						<strong>Jordan Max 200</strong>
-						<span>86.00€</span>
-					</div>
-
-					<div class="cart-like">
-						<a href="#"><i class="fas fa-shopping-cart"></i></a>
-						<a href="#"><i class="far fa-heart"></i></a>
-					</div>
-				</div>
-			</div>
-
-		</div>
-
-
-
-
-			<h2>Jersey</h2>
-			<div class="feature-product-container">
-
-			<div class="feature-product-box">
-				
-				<div class="product-feature-img">
-					<img src="../Resources/productImg/j1.png" alt="">
-				</div>
-
-				<div class="product-feature-text-container">
-					<div class="product-feature-text">
-						<strong>Rui Hachimura</strong>
-						<span>110.00€</span>
-					</div>
-
-					<div class="cart-like">
-						<a href="#"><i class="fas fa-shopping-cart"></i></a>
-						<a href="#"><i class="far fa-heart"></i></a>
-					</div>
-				</div>
-			</div>
-			<div class="feature-product-box">
-				
-				<div class="product-feature-img">
-					<img src="../Resources/productImg/j2.png" alt="">
-				</div>
-
-				<div class="product-feature-text-container">
-					<div class="product-feature-text">
-						<strong>Zion Williamson</strong>
-						<span>110.00€</span>
-					</div>
-
-					<div class="cart-like">
-						<a href="#"><i class="fas fa-shopping-cart"></i></a>
-						<a href="#"><i class="far fa-heart"></i></a>
-					</div>
-				</div>
-			</div>
-			<div class="feature-product-box">
-				
-				<div class="product-feature-img">
-					<img src="../Resources/productImg/j3.png" alt="">
-				</div>
-
-				<div class="product-feature-text-container">
-					<div class="product-feature-text">
-						<strong>LeBron James</strong>
-						<span>110.00€</span>
-					</div>
-
-					<div class="cart-like">
-						<a href="#"><i class="fas fa-shopping-cart"></i></a>
-						<a href="#"><i class="far fa-heart"></i></a>
-					</div>
-				</div>
-			</div>
-			<div class="feature-product-box">
-				
-				<div class="product-feature-img">
-					<img src="../Resources/productImg/j4.png" alt="">
-				</div>
-
-				<div class="product-feature-text-container">
-					<div class="product-feature-text">
-						<strong>Giannis</strong>
-						<span>110.00€</span>
-					</div>
-
-					<div class="cart-like">
-						<a href="#"><i class="fas fa-shopping-cart"></i></a>
-						<a href="#"><i class="far fa-heart"></i></a>
-					</div>
-				</div>
-			</div>
+				</div>.";
+			}
+			if (isset($_GET['id'])) {
+				include_once '../Controller/addToCartController.php';
+			}
+			?>
 
 	</section>
 

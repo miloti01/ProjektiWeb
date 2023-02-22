@@ -4,7 +4,7 @@ class config{
     private $server="localhost";
     private $username="root";
     private $password="";
-    private $database = "shootshop";
+    private $database="shootshop";
 
 
     function startConnection(){

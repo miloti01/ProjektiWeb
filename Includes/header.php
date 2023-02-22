@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <nav class="navigation">
 
 		<a href="#" class="logo">ShootShop</a>
@@ -11,8 +14,19 @@
 
 		<ul class="menu">
 			<li><a href="index.php" class="active">Home</a></li>
-			<li><a href="shop.php">Shop</a></li>
-			<li><a href="contact.php">Contact</a></li>
+			<li><a href="shop.php" class="active">Shop</a></li>
+			<li><a href="about.php" class="active">About Us</a></li>
+			<li><a href="contact.php" class="active">Contact</a></li>
+			<?php
+
+			if(isset($_SESSION['role'])){
+			 	if ($_SESSION['role']=='admin'){
+			 	echo "
+			 		<li><a href='dashboard.php' class='active'>Dashboard</a></li>
+			  		";
+			 	}
+			}
+			?>
 		</ul>
 
 		<div class="right-elements">
@@ -21,11 +35,10 @@
 				<i class="fas fa-search"></i>
 			</a>
 
-			<a href="#" class="cart">
+			<a href="../view/cart.php" class="cart">
 				<i class="fas fa-shopping-bag"></i>
 			</a>
             <?php
- 			    session_start();
  				if(isset($_SESSION['role'])){
  					echo "
  						<a href='#'>".$_SESSION['name']."</a>
@@ -37,6 +50,7 @@
  						<a href='login.php'>Log In</a>
   						";
  				}
+				
  			?>
 
 		</div>

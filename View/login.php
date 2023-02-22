@@ -26,7 +26,7 @@
           <form action="" method="post" class="sign-in-form">
             <h2 class="title">Sign in</h2>
             <div class="input-field">
-              <i class="fas fa-user"></i>
+              <i class="fas fa-envelope"></i>
               <input type="text" placeholder="Email Address" name="email"  required />
             </div>
           <div class="input-field">
